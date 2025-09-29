@@ -9,7 +9,7 @@ tags:
 
 # algo
 
-### 待做
+### 待做题
 
 [3297. 统计重新排列后包含另一个字符串的子字符串数目 I - 力扣（LeetCode）](https://leetcode.cn/problems/count-substrings-that-can-be-rearranged-to-contain-a-string-i/description/)
 
