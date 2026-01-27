@@ -1,0 +1,60 @@
+baseurl: https://andy115951.github.io
+languageCode: zh-CN
+theme: stack
+
+pagination:
+  pagerSize: 10
+title: 技术博客
+
+# 默认内容语言
+defaultContentLanguage: zh
+
+# 启用 Git 信息
+enableGitInfo: true
+enableRobotsTXT: true
+hasCJKLanguage: true
+
+# 菜单配置
+menu:
+  main:
+    - identifier: home
+      name: 首页
+      url: /
+      weight: 1
+      params:
+        icon: home
+    - identifier: archives
+      name: 归档
+      url: /archives
+      weight: 2
+      params:
+        icon: archives
+    - identifier: search
+      name: 搜索
+      url: /search
+      weight: 3
+      params:
+        icon: search
+
+# 相关内容配置
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 100
+
+# 标记配置
+markup:
+  goldmark:
+    renderer:
+      ## 设置为 true 会更安全，但可能会影响一些 HTML 渲染
+      unsafe: true
+  highlight:
+    ## 代码高亮选项，更多选项见 https://gohugo.io/content-management/syntax-highlighting/
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false

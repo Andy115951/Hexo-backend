@@ -1,0 +1,66 @@
+<style>
+    /* 自定义背景图片 */
+    body {
+        background-image: url('/img/shu_bg1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    /* 添加白色淡化遮罩 */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.75);
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    /* 左侧栏文字改深色 */
+    .sidebar-left .sidebar-sticky,
+    .sidebar-left .logo-title,
+    .sidebar-left .logo-subtitle,
+    .sidebar-left a,
+    .sidebar-left .menu-item {
+        color: #2c3e50 !important;
+    }
+
+    .sidebar-left .menu-item:hover {
+        color: #1a1a1a !important;
+        background: rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* 文章卡片背景 */
+    .article-list,
+    .article-container,
+    .card,
+    .widget {
+        background: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(5px);
+    }
+
+    /* 暗色模式下的背景 */
+    [data-theme="dark"] body::before {
+        background: rgba(0, 0, 0, 0.65);
+    }
+
+    [data-theme="dark"] .sidebar-left .sidebar-sticky,
+    [data-theme="dark"] .sidebar-left .logo-title,
+    [data-theme="dark"] .sidebar-left .logo-subtitle,
+    [data-theme="dark"] .sidebar-left a,
+    [data-theme="dark"] .sidebar-left .menu-item {
+        color: #e0e0e0 !important;
+    }
+
+    [data-theme="dark"] .article-list,
+    [data-theme="dark"] .article-container,
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .widget {
+        background: rgba(30, 34, 46, 0.9) !important;
+    }
+</style>

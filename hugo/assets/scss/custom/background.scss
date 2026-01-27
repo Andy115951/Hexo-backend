@@ -1,0 +1,41 @@
+// 自定义背景样式
+body {
+    background-image: url('/img/shu_bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+// 暗色模式下的背景
+[data-theme="dark"] body {
+    background-image: url('/img/shu_bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    // 添加暗色遮罩让背景变暗
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+}
+
+// 确保内容区域可读
+.article-container,
+.main-article,
+.widget {
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+[data-theme="dark"] .article-container,
+[data-theme="dark"] .main-article,
+[data-theme="dark"] .widget {
+    background: rgba(24, 28, 39, 0.95) !important;
+}
