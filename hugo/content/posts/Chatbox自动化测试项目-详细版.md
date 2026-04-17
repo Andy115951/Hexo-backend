@@ -1,6 +1,7 @@
 ---
 title: Chatbox AI 自动化测试项目详解
 date: 2025-01-13T00:00:00+08:00
+draft: true
 categories:
   - 简历
   - 项目经验
