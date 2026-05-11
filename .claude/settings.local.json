@@ -4,7 +4,25 @@
       "Bash(mkdir:*)",
       "Bash(tree:*)",
       "Bash(npm test:*)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(git add .nojekyll)",
+      "Bash(git commit -m \"Add .nojekyll to disable Jekyll processing on source repo\")",
+      "Bash(git push origin main)",
+      "Bash(./deploy.sh)",
+      "Bash(hugo --minify)",
+      "Bash(git ls-remote --heads https://github.com/Andy115951/Andy115951.github.io.git)",
+      "Bash(curl -s https://andy115951.github.io/)",
+      "Bash(curl -s https://andy115951.github.io/sitemap.xml)",
+      "Bash(xargs -I {} bash -c \"grep -l ''Chatbox'' {} 2>/dev/null || true\")",
+      "Bash(for file in /Users/apple/Documents/code/hexo/Hexo-backend/hugo/content/posts/*.md)",
+      "Bash(do if grep -q \"Chatbox\" \"$file\")",
+      "Bash(then echo \"$file\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(xargs -I {} sh -c 'head -5 \"\"{}\"\" | grep -E \"\"title:.*[Cc]hatbox\"\"')",
+      "Bash(curl -s https://andy115951.github.io/index.xml)",
+      "Bash(curl -s https://andy115951.github.io/tags/)",
+      "Bash(curl -sI https://andy115951.github.io/chatbox-%E9%A1%B9%E7%9B%AE%E9%9D%A2%E8%AF%95%E8%AF%9D%E6%9C%AF%E6%A8%A1%E6%9D%BF/)"
     ]
   }
 }
