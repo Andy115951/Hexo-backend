@@ -14,28 +14,6 @@ enableGitInfo: true
 enableRobotsTXT: true
 hasCJKLanguage: true
 
-# 菜单配置
-menu:
-  main:
-    - identifier: home
-      name: 首页
-      url: /
-      weight: 1
-      params:
-        icon: home
-    - identifier: archives
-      name: 归档
-      url: /archives
-      weight: 2
-      params:
-        icon: archives
-    - identifier: search
-      name: 搜索
-      url: /search
-      weight: 3
-      params:
-        icon: search
-
 # 相关内容配置
 related:
   includeNewer: true
