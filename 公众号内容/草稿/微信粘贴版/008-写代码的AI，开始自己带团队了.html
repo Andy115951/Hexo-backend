@@ -1,57 +1,64 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>写代码的AI，开始自己带团队了</title>
-</head>
-<body style="margin:0;padding:0;background:#fff;">
-<!-- 用法：浏览器打开本文件 → 全选正文 → 复制 → 粘贴到公众号后台编辑器 -->
-<div id="js_content" style="max-width:677px;margin:0 auto;padding:16px;font-size:16px;line-height:28px;color:#333;letter-spacing:0.034em;text-align:left;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;">
-<h1 style="font-size:18px;font-weight:bold;line-height:32px;text-align:left;color:#222;margin:1.2em 0 0.6em;">写代码的AI，开始自己带团队了</h1>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">你大概用过这样的编程助手：打开对话框，丢一段需求，等它吐出几段代码，再自己复制、改、跑、修。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">过去一周，这件事悄悄换了形态。Cursor、Anthropic、OpenAI 几乎前后脚，都在推同一种玩法——<strong style="font-weight:700;color:#222;line-height:28px">你不再对着一个「写代码的聊天框」，而是对着一个能分活、盯进度、长时间记事的「项目协调者」</strong>。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">读完这篇，你会更清楚：编程助手下一阶段拼的是什么，以及这对你日常写代码、改需求、盯进度意味着什么。</p>
-<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0;" />
-<h2 style="font-size:18px;font-weight:bold;line-height:32px;text-align:left;color:#222;margin:1.2em 0 0.6em;">关掉电脑，活还能继续干</h2>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">9 月 10 日，Cursor 上线了 <strong style="font-weight:700;color:#222;line-height:28px">Projects</strong>。官方说法很直白：它可以扛住「一个功能、一次迁移，甚至一整款应用」这种跨几周、几个月的活；上下文能长期保留，还能把任务分给大量子 Agent，并按订阅信号自动开工。</p>
-<p style="font-size:14px;line-height:24px;color:#888;text-align:left;margin:0.8em 0;">来源：<a href="https://cursor.com/blog/projects" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">Introducing Projects · Cursor</a></p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">关键变化不在「模型又聪明一点」，而在工作方式：</p>
-<ul style="margin:0.8em 0;padding-left:1.4em;line-height:28px;text-align:left;"><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;">你主要聊的是 <strong style="font-weight:700;color:#222;line-height:28px">coordinator（协调者）</strong>——它自己不怎么写代码，而是指挥其他 Agent 去写、去测。</li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;">默认跑在云端「自己的电脑」上，你合上笔记本也不等于项目停摆；需要本机验证时，再临时拉一个本地 Agent。</li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;">项目会积累共享上下文（怎么测某个服务、你偏好怎么改代码），后来的 Agent 不用每次从零「入职」。</li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;">还能订阅 Slack、定时任务，或者盯着你的 PR：CI 挂了、PR 合并了，它能主动动。</li></ul>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">Cursor 还甩出一组自家使用体验：新用户合并 PR 大约多 30%；主要用 Projects 的人，合并量大约是原来的六倍。数字可以打折听，但方向很清楚——<strong style="font-weight:700;color:#222;line-height:28px">厂商在卖的，已经不是「更好的补全」，而是「能扛住一整个项目周期的协作层」</strong>。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">对你来说：以后选编程工具，别只比「这一句补全准不准」，也要看它能不能把一次迁移、一个跨多仓库的需求，当成可持续跟进的项目来管。</p>
-<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0;" />
-<h2 style="font-size:18px;font-weight:bold;line-height:32px;text-align:left;color:#222;margin:1.2em 0 0.6em;">Claude 也把「项目」从文件夹改成了对话</h2>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">一周后（9 月 17 日），Anthropic 把 Claude 的 Projects 重做成了另一种说法：<strong style="font-weight:700;color:#222;line-height:28px">从文件夹，变成一场持续对话</strong>。</p>
-<p style="font-size:14px;line-height:24px;color:#888;text-align:left;margin:0.8em 0;">来源：<a href="https://claude.com/blog/projects-redesigned" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">Projects redesigned: from folder to conversation（Claude）</a> · <a href="https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">The Verge 报道</a></p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">官方举的例子很生活：你给项目定目标——「把结账接口的 p75 延迟压下来」——Claude 会去剖析各端点、试优化、在并行线程里开 PR；或者跨 API / Web / 移动端仓库下线一个旧接口，每个仓库一条线程，做完再告诉你先合哪几个。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">底层结构几乎和 Cursor 同一套语言：</p>
-<ul style="margin:0.8em 0;padding-left:1.4em;line-height:28px;text-align:left;"><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;"><strong style="font-weight:700;color:#222;line-height:28px">Threads</strong> 干活，<strong style="font-weight:700;color:#222;line-height:28px">coordinator</strong> 调度。</li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;">每条 thread 是独立的 Claude Code 云端会话，各自有分支和仓库副本。</li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;">撞车了就按普通 PR 合并冲突处理，而不是神秘的「黑箱合代码」。</li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;">共享记忆 + Library（文件与产物库），让上一轮摸到的决策、文档、产物，下一轮还找得到。</li></ul>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">目前主要面向部分 Claude Pro / Max、且使用云端会话的用户灰度；本地工具与本机代码「很快就来」。你暂时摸不到也没关系——<strong style="font-weight:700;color:#222;line-height:28px">产品叙事已经统一了：并行、可离开、可回看</strong>。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">这意味着：即便你还在用「单窗口聊代码」，行业标尺已经挪到「能不能并行开几条线、人离开后是否还在推进」。</p>
-<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0;" />
-<h2 style="font-size:18px;font-weight:bold;line-height:32px;text-align:left;color:#222;margin:1.2em 0 0.6em;">OpenAI 把 Codex 那套「缰绳」开放成了 API</h2>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">还是 9 月 10 日这一天，OpenAI 把驱动 Codex 的那套托管 harness，以 <strong style="font-weight:700;color:#222;line-height:28px">Agents API</strong>（公开测试）的形式交给开发者。</p>
-<p style="font-size:14px;line-height:24px;color:#888;text-align:left;margin:0.8em 0;">来源：<a href="https://openai.com/index/introducing-the-agents-api/" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">Introducing the Agents API（OpenAI）</a> · <a href="https://developers.openai.com/api/docs/changelog" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">API Changelog</a></p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">它强调的不是又一个聊天接口，而是：<strong style="font-weight:700;color:#222;line-height:28px">会话持久化、编排、上下文压缩与恢复</strong>由 OpenAI 管；你负责工具、MCP、以及代码跑在哪（官方托管沙箱，或自托管 / 第三方沙箱）。文档里还能开多 Agent、设并发上限——听起来很「工程师向」，但和 Cursor / Claude 的产品动作是同一信号：<strong style="font-weight:700;color:#222;line-height:28px">长跑 Agent 需要一层「缰绳」，不能只靠一次次新开对话框</strong>。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">对普通读者，你不必立刻去接这个 API。更有用的读法是：连平台层都在标准化「可恢复的 Agent 会话」——说明「聊完就散」已经不够撑复杂任务了。以后你用的很多产品，底层很可能长得像这套：有会话、有沙箱、有子任务，而不是一个无限滚动的对话框。</p>
-<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0;" />
-<h2 style="font-size:18px;font-weight:bold;line-height:32px;text-align:left;color:#222;margin:1.2em 0 0.6em;">你真正多出来的角色，是「拍板的人」</h2>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">把三家放在一起看，画面很整齐：</p>
-<table style="width:100%;border-collapse:collapse;margin:0.8em 0;font-size:14px;line-height:24px;text-align:left;"><thead><tr><th style="border:1px solid #ddd;padding:8px 10px;background:#f5f5f5;font-weight:bold;color:#222;text-align:left;font-size:14px;line-height:24px;">以前常见形态</th><th style="border:1px solid #ddd;padding:8px 10px;background:#f5f5f5;font-weight:bold;color:#222;text-align:left;font-size:14px;line-height:24px;">这周更清晰的形态</th></tr></thead><tbody><tr><td style="border:1px solid #ddd;padding:8px 10px;color:#333;vertical-align:top;text-align:left;font-size:14px;line-height:24px;">一个对话框 + 一段代码</td><td style="border:1px solid #ddd;padding:8px 10px;color:#333;vertical-align:top;text-align:left;font-size:14px;line-height:24px;">一个协调者 + 多条并行线程</td></tr><tr><td style="border:1px solid #ddd;padding:8px 10px;color:#333;vertical-align:top;text-align:left;font-size:14px;line-height:24px;">关电脑 ≈ 工作中断</td><td style="border:1px solid #ddd;padding:8px 10px;color:#333;vertical-align:top;text-align:left;font-size:14px;line-height:24px;">云端默认继续跑</td></tr><tr><td style="border:1px solid #ddd;padding:8px 10px;color:#333;vertical-align:top;text-align:left;font-size:14px;line-height:24px;">每次重讲背景</td><td style="border:1px solid #ddd;padding:8px 10px;color:#333;vertical-align:top;text-align:left;font-size:14px;line-height:24px;">项目记忆 / 共享上下文慢慢变厚</td></tr><tr><td style="border:1px solid #ddd;padding:8px 10px;color:#333;vertical-align:top;text-align:left;font-size:14px;line-height:24px;">你亲手拆任务、拼结果</td><td style="border:1px solid #ddd;padding:8px 10px;color:#333;vertical-align:top;text-align:left;font-size:14px;line-height:24px;">你定目标与边界，它拆活、开 PR、跑测</td></tr></tbody></table>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">这并不是「AI 取代程序员」的口号更新，更像工种微调：<strong style="font-weight:700;color:#222;line-height:28px">你从「亲手敲每一行」更多转向「定目标、看冲突、做取舍」</strong>。合并冲突还在、测试还在、业务判断还在——只是「谁去开第一版 PR」这件事，正在被产品默认外包给 Agent 舰队。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">如果你不写代码，这条线也和你有关：客服、运营、设计协作类工具，已经在抄同一套「协调者 + 并行工人」的壳。今天编程圈先吵起来，往往是其他岗位明天会碰到的界面。</p>
-<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0;" />
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">再往实处想一层：你交出去的活，越来越像「带远程小队」，而不是「丢给自动补全」。目标要写清楚，验收标准要能点头或摇头，冲突该不该合也得你拍板。工具越能干，越需要你把边界说明白——不然并行线程只会更快地往错的方向跑。</p>
-<h2 style="font-size:18px;font-weight:bold;line-height:32px;text-align:left;color:#222;margin:1.2em 0 0.6em;">本周信号，一句话收束</h2>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">这一周编程助手赛道的主线，不是又一个「更强模型」标题，而是<strong style="font-weight:700;color:#222;line-height:28px">工作单元从「一次对话」抬升到「一个可持续的项目」</strong>：有协调者、有并行线程、有长期记忆，人可以离开屏幕，机器还在往前推。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">Cursor、Claude、OpenAI 用不同入口讲了同一件事——<strong style="font-weight:700;color:#222;line-height:28px">谁能把复杂活拆开、盯住、收回来，谁就更像下一代默认工作方式</strong>。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">你现在更常碰到的，是「单窗口补全」，还是已经开始用「多 Agent / 项目」？评论区聊聊也行。</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;">如果有帮助，欢迎点赞、在看、转发～</p>
-<p style="font-size:16px;line-height:28px;color:#333;text-align:justify;margin:0.8em 0;"><strong style="font-weight:700;color:#222;line-height:28px">下期预告</strong>：《用 AI 搭个人知识库：把收藏夹真正变成能问能答的第二大脑》</p>
-<hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0;" />
-<h2 style="font-size:18px;font-weight:bold;line-height:32px;text-align:left;color:#222;margin:1.2em 0 0.6em;">延伸阅读</h2>
-<ol style="margin:0.8em 0;padding-left:1.4em;line-height:28px;text-align:left;"><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;"><a href="https://cursor.com/blog/projects" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">Introducing Projects · Cursor</a></li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;"><a href="https://claude.com/blog/projects-redesigned" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">Projects redesigned · Claude</a></li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;"><a href="https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">Claude Code Projects 报道 · The Verge</a></li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;"><a href="https://openai.com/index/introducing-the-agents-api/" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">Introducing the Agents API · OpenAI</a></li><li style="font-size:16px;line-height:28px;color:#333;text-align:left;margin:0 0 8px;"><a href="https://developers.openai.com/api/docs/changelog" style="color:#576b95;text-decoration:underline;line-height:28px" target="_blank" rel="noopener">OpenAI API Changelog（Agents API）</a></li></ol>
-</div>
-</body>
-</html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#ffffff;">
+<!-- 打开本文件 → 鼠标点进正文 → Cmd+A → 复制 → 先清空公众号编辑器再粘贴 -->
+<div id="js_content" style="max-width:677px;margin:0 auto;padding:20px 16px;font-size:16px;line-height:32px;color:#333333;text-align:left;background:#ffffff;">
+<h1 style="font-size:18px;font-weight:bold;line-height:36px;color:#222222;text-align:left;margin:24px 0 12px 0;padding:0;">写代码的AI，开始自己带团队了</h1>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">你大概用过这样的编程助手：打开对话框，丢一段需求，等它吐出几段代码，再自己复制、改、跑、修。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">过去一周，这件事悄悄换了形态。Cursor、Anthropic、OpenAI 几乎前后脚，都在推同一种玩法——<strong>你不再对着一个「写代码的聊天框」，而是对着一个能分活、盯进度、长时间记事的「项目协调者」</strong>。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">读完这篇，你会更清楚：编程助手下一阶段拼的是什么，以及这对你日常写代码、改需求、盯进度意味着什么。</p>
+<p style="font-size:16px;line-height:32px;text-align:center;color:#dddddd;margin:16px 0;padding:0;">—</p>
+<h2 style="font-size:18px;font-weight:bold;line-height:36px;color:#222222;text-align:left;margin:24px 0 12px 0;padding:0;">关掉电脑，活还能继续干</h2>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">9 月 10 日，Cursor 上线了 <strong>Projects</strong>。官方说法很直白：它可以扛住「一个功能、一次迁移，甚至一整款应用」这种跨几周、几个月的活；上下文能长期保留，还能把任务分给大量子 Agent，并按订阅信号自动开工。</p>
+<p style="font-size:14px;line-height:28px;color:#888888;text-align:left;margin:0 0 16px 0;padding:0;">来源：<a href="https://cursor.com/blog/projects" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">Introducing Projects · Cursor</a></p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">关键变化不在「模型又聪明一点」，而在工作方式：</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">• 你主要聊的是 <strong>coordinator（协调者）</strong>——它自己不怎么写代码，而是指挥其他 Agent 去写、去测。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">• 默认跑在云端「自己的电脑」上，你合上笔记本也不等于项目停摆；需要本机验证时，再临时拉一个本地 Agent。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">• 项目会积累共享上下文（怎么测某个服务、你偏好怎么改代码），后来的 Agent 不用每次从零「入职」。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">• 还能订阅 Slack、定时任务，或者盯着你的 PR：CI 挂了、PR 合并了，它能主动动。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">Cursor 还甩出一组自家使用体验：新用户合并 PR 大约多 30%；主要用 Projects 的人，合并量大约是原来的六倍。数字可以打折听，但方向很清楚——<strong>厂商在卖的，已经不是「更好的补全」，而是「能扛住一整个项目周期的协作层」</strong>。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">对你来说：以后选编程工具，别只比「这一句补全准不准」，也要看它能不能把一次迁移、一个跨多仓库的需求，当成可持续跟进的项目来管。</p>
+<p style="font-size:16px;line-height:32px;text-align:center;color:#dddddd;margin:16px 0;padding:0;">—</p>
+<h2 style="font-size:18px;font-weight:bold;line-height:36px;color:#222222;text-align:left;margin:24px 0 12px 0;padding:0;">Claude 也把「项目」从文件夹改成了对话</h2>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">一周后（9 月 17 日），Anthropic 把 Claude 的 Projects 重做成了另一种说法：<strong>从文件夹，变成一场持续对话</strong>。</p>
+<p style="font-size:14px;line-height:28px;color:#888888;text-align:left;margin:0 0 16px 0;padding:0;">来源：<a href="https://claude.com/blog/projects-redesigned" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">Projects redesigned: from folder to conversation（Claude）</a> · <a href="https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">The Verge 报道</a></p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">官方举的例子很生活：你给项目定目标——「把结账接口的 p75 延迟压下来」——Claude 会去剖析各端点、试优化、在并行线程里开 PR；或者跨 API / Web / 移动端仓库下线一个旧接口，每个仓库一条线程，做完再告诉你先合哪几个。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">底层结构几乎和 Cursor 同一套语言：</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">• <strong>Threads</strong> 干活，<strong>coordinator</strong> 调度。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">• 每条 thread 是独立的 Claude Code 云端会话，各自有分支和仓库副本。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">• 撞车了就按普通 PR 合并冲突处理，而不是神秘的「黑箱合代码」。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">• 共享记忆 + Library（文件与产物库），让上一轮摸到的决策、文档、产物，下一轮还找得到。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">目前主要面向部分 Claude Pro / Max、且使用云端会话的用户灰度；本地工具与本机代码「很快就来」。你暂时摸不到也没关系——<strong>产品叙事已经统一了：并行、可离开、可回看</strong>。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">这意味着：即便你还在用「单窗口聊代码」，行业标尺已经挪到「能不能并行开几条线、人离开后是否还在推进」。</p>
+<p style="font-size:16px;line-height:32px;text-align:center;color:#dddddd;margin:16px 0;padding:0;">—</p>
+<h2 style="font-size:18px;font-weight:bold;line-height:36px;color:#222222;text-align:left;margin:24px 0 12px 0;padding:0;">OpenAI 把 Codex 那套「缰绳」开放成了 API</h2>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">还是 9 月 10 日这一天，OpenAI 把驱动 Codex 的那套托管 harness，以 <strong>Agents API</strong>（公开测试）的形式交给开发者。</p>
+<p style="font-size:14px;line-height:28px;color:#888888;text-align:left;margin:0 0 16px 0;padding:0;">来源：<a href="https://openai.com/index/introducing-the-agents-api/" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">Introducing the Agents API（OpenAI）</a> · <a href="https://developers.openai.com/api/docs/changelog" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">API Changelog</a></p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">它强调的不是又一个聊天接口，而是：<strong>会话持久化、编排、上下文压缩与恢复</strong>由 OpenAI 管；你负责工具、MCP、以及代码跑在哪（官方托管沙箱，或自托管 / 第三方沙箱）。文档里还能开多 Agent、设并发上限——听起来很「工程师向」，但和 Cursor / Claude 的产品动作是同一信号：<strong>长跑 Agent 需要一层「缰绳」，不能只靠一次次新开对话框</strong>。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">对普通读者，你不必立刻去接这个 API。更有用的读法是：连平台层都在标准化「可恢复的 Agent 会话」——说明「聊完就散」已经不够撑复杂任务了。以后你用的很多产品，底层很可能长得像这套：有会话、有沙箱、有子任务，而不是一个无限滚动的对话框。</p>
+<p style="font-size:16px;line-height:32px;text-align:center;color:#dddddd;margin:16px 0;padding:0;">—</p>
+<h2 style="font-size:18px;font-weight:bold;line-height:36px;color:#222222;text-align:left;margin:24px 0 12px 0;padding:0;">你真正多出来的角色，是「拍板的人」</h2>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">把三家放在一起看，画面很整齐：</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">| 以前常见形态 | 这周更清晰的形态 |</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">|---|---|</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">| 一个对话框 + 一段代码 | 一个协调者 + 多条并行线程 |</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">| 关电脑 ≈ 工作中断 | 云端默认继续跑 |</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">| 每次重讲背景 | 项目记忆 / 共享上下文慢慢变厚 |</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">| 你亲手拆任务、拼结果 | 你定目标与边界，它拆活、开 PR、跑测 |</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">这并不是「AI 取代程序员」的口号更新，更像工种微调：<strong>你从「亲手敲每一行」更多转向「定目标、看冲突、做取舍」</strong>。合并冲突还在、测试还在、业务判断还在——只是「谁去开第一版 PR」这件事，正在被产品默认外包给 Agent 舰队。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">如果你不写代码，这条线也和你有关：客服、运营、设计协作类工具，已经在抄同一套「协调者 + 并行工人」的壳。今天编程圈先吵起来，往往是其他岗位明天会碰到的界面。</p>
+<p style="font-size:16px;line-height:32px;text-align:center;color:#dddddd;margin:16px 0;padding:0;">—</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">再往实处想一层：你交出去的活，越来越像「带远程小队」，而不是「丢给自动补全」。目标要写清楚，验收标准要能点头或摇头，冲突该不该合也得你拍板。工具越能干，越需要你把边界说明白——不然并行线程只会更快地往错的方向跑。</p>
+<h2 style="font-size:18px;font-weight:bold;line-height:36px;color:#222222;text-align:left;margin:24px 0 12px 0;padding:0;">本周信号，一句话收束</h2>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">这一周编程助手赛道的主线，不是又一个「更强模型」标题，而是<strong>工作单元从「一次对话」抬升到「一个可持续的项目」</strong>：有协调者、有并行线程、有长期记忆，人可以离开屏幕，机器还在往前推。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">Cursor、Claude、OpenAI 用不同入口讲了同一件事——<strong>谁能把复杂活拆开、盯住、收回来，谁就更像下一代默认工作方式</strong>。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">你现在更常碰到的，是「单窗口补全」，还是已经开始用「多 Agent / 项目」？评论区聊聊也行。</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">如果有帮助，欢迎点赞、在看、转发～</p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;"><strong>下期预告</strong>：《用 AI 搭个人知识库：把收藏夹真正变成能问能答的第二大脑》</p>
+<p style="font-size:16px;line-height:32px;text-align:center;color:#dddddd;margin:16px 0;padding:0;">—</p>
+<h2 style="font-size:18px;font-weight:bold;line-height:36px;color:#222222;text-align:left;margin:24px 0 12px 0;padding:0;">延伸阅读</h2>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">1. <a href="https://cursor.com/blog/projects" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">Introducing Projects · Cursor</a></p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">2. <a href="https://claude.com/blog/projects-redesigned" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">Projects redesigned · Claude</a></p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">3. <a href="https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">Claude Code Projects 报道 · The Verge</a></p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">4. <a href="https://openai.com/index/introducing-the-agents-api/" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">Introducing the Agents API · OpenAI</a></p>
+<p style="font-size:16px;line-height:32px;color:#333333;text-align:justify;margin:0 0 16px 0;padding:0;">5. <a href="https://developers.openai.com/api/docs/changelog" style="color:#576b95;text-decoration:underline;font-size:16px;line-height:32px;">OpenAI API Changelog（Agents API）</a></p>
+</div></body></html>
